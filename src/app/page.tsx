@@ -1,6 +1,6 @@
 "use client";
 
-import { Element } from 'react-scroll';
+import { Element, Link } from 'react-scroll';
 import { useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import AOS from "aos";
@@ -34,54 +34,95 @@ export default function Home() {
       </header>
 
       <Element name="Home">
-        <div className="bg-[#121212] min-h-screen text-white overflow-hidden relative py-20">
-          <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-[#1595b6] opacity-20 rounded-full blur-3xl z-0"></div>
-          <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-[#1595b6] opacity-20 rounded-full blur-3xl z-0"></div>
+        <div className="bg-[#020617] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
+            {/* AI-Inspired Background Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+                <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#0078D4] opacity-[0.07] rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-[#34A853] opacity-[0.05] rounded-full blur-[100px]"></div>
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
+            </div>
 
-          <div className="container mx-auto px-10 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <div className="text-center lg:text-left" data-aos="fade-right">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Hi, I’m <span className="text-[#1595b6]">Mesum</span>
+          <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 py-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-7 text-center lg:text-left" data-aos="fade-right">
+                <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/70">Available for Opportunities</span>
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-light mb-2 tracking-tight">
+                  Hi, I’m <span className="font-bold text-white">Mesum<span className="text-[#0078D4]">Ali</span></span>
                 </h1>
-                <h2 className="text-3xl md:text-4xl font-semibold text-[#1595b6] mb-6">
-                  Full Stack Developer
+                <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0078D4] to-[#34A853] mb-6">
+                  Full Stack & AI Developer
                 </h2>
-                <p className="border-l-4 border-r-4 rounded-2xl pl-6 pr-6 border-[#1595b6] text-base text-white/90 mx-auto lg:mx-0 leading-relaxed mb-6">
-                  Specializing in dynamic websites and scalable e-commerce systems that deliver exceptional user experiences and drive measurable results.
+                
+                <p className="max-w-xl text-base text-white/60 mb-8 leading-relaxed font-light">
+                    Architecting intelligent web systems and scalable AI solutions. I bridge the gap between robust backend infrastructure and intuitive user experiences.
                 </p>
-                <div
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  data-aos="fade-up"
-                >
-                  <button
-                    className="bg-[#1595b6] hover:bg-[#117a95] px-8 py-3 rounded-md text-white font-semibold text-base transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#1595b6]/30 cursor-pointer"
-                    aria-label="Explore Mesum's work"
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="200">
+                  <Link
+                    to="Projects"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="bg-[#0078D4] hover:bg-[#005a9e] text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:-translate-y-1 shadow-xl shadow-[#0078D4]/20 cursor-pointer flex items-center justify-center"
                   >
-                    Explore My Work
-                  </button>
+                    View Projects
+                  </Link>
                   <button
-                    className="bg-transparent hover:bg-[#1595b6]/10 border-2 border-[#1595b6] px-8 py-3 rounded-md text-[#1595b6] font-semibold text-base transition-all duration-300 transform hover:scale-105"
-                    aria-label="Download Mesum's resume"
+                    className="group relative px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
                   >
-                    Download Resume
+                    <span className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors"></span>
+                    <span className="absolute inset-0 border border-white/10 group-hover:border-[#0078D4]/30 rounded-xl transition-colors"></span>
+                    <span className="relative text-white/80 group-hover:text-white">Download Resume</span>
                   </button>
                 </div>
-                <div
-                  className="mt-8 flex lg:justify-start justify-center items-center gap-4"
-                  data-aos="zoom-in"
-                >
-                  <span className="bg-[#1e1e1e] px-4 py-2 rounded-full text-sm font-medium text-white/90">Frontend</span>
-                  <span className="bg-[#1e1e1e] px-4 py-2 rounded-full text-sm font-medium text-white/90">Backend</span>
-                  <span className="bg-[#1e1e1e] px-4 py-2 rounded-full text-sm font-medium text-white/90">Database</span>
+
+                <div className="mt-10 flex flex-wrap lg:justify-start justify-center items-center gap-3" data-aos="zoom-in" data-aos-delay="400">
+                    {[
+                        { label: "React/Next.js", color: "white/10" },
+                        { label: "Node.js", color: "white/10" },
+                        { label: "Python/AI", color: "#0078D4/20" },
+                        { label: "LLM Integration", color: "#34A853/20" }
+                    ].map((tag, i) => (
+                        <span key={i} className={`px-4 py-1.5 rounded-lg text-[11px] font-semibold tracking-wide border border-white/5 bg-white/5 text-white/70`}>
+                            {tag.label}
+                        </span>
+                    ))}
                 </div>
               </div>
 
-              <div className="flex justify-center items-center lg:justify-end" data-aos="fade-left">
-                <div className="relative group bg-gradient-to-br from-[#1595b6] to-[#236b81] p-[5px] rounded-[20px] shadow-lg shadow-cyan-700/30">
-                  <div className="bg-[#0e0e0e] rounded-[15px] overflow-hidden w-72 h-96">
-                    <Image src={pic} alt="Mesum" className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition duration-500" />
-                  </div>
+              <div className="lg:col-span-5 flex justify-center items-center" data-aos="fade-left">
+                <div className="relative">
+                    {/* Decorative element behind image */}
+                    <div className="absolute -inset-4 border border-white/5 rounded-[40px] rotate-3 z-0"></div>
+                    <div className="absolute -inset-4 border border-[#0078D4]/20 rounded-[40px] -rotate-3 z-0"></div>
+                    
+                    <div className="relative z-10 w-64 h-80 md:w-72 md:h-[420px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+                        <Image 
+                            src={pic} 
+                            alt="Mesum Ali - Full Stack & AI Developer" 
+                            className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                    </div>
+
+                    {/* AI Floating Card */}
+                    <div className="absolute -bottom-6 -right-6 md:-right-8 bg-slate-900/90 backdrop-blur-xl p-4 rounded-2xl border border-white/10 shadow-2xl z-20 max-w-[180px]" data-aos="fade-up" data-aos-delay="600">
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="w-7 h-7 rounded-lg bg-[#34A853]/20 flex items-center justify-center">
+                                <PiBrainLight className="text-[#34A853]" size={18} />
+                            </div>
+                            <span className="text-[11px] font-bold text-white">AI Engine</span>
+                        </div>
+                        <p className="text-[9px] text-white/50 leading-relaxed">Implementing advanced LLM architectures for next-gen apps.</p>
+                    </div>
                 </div>
               </div>
             </div>
