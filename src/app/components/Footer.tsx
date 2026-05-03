@@ -1,118 +1,128 @@
+import { Link } from 'react-scroll';
 import {
-    FaHome,
-    FaUserAlt,
-    FaProjectDiagram,
-    FaCog,
-    FaLaptopCode,
-    FaEnvelope,
     FaLinkedinIn,
     FaTwitter,
     FaGithub,
+    FaEnvelope,
+    FaPhoneAlt,
+    FaMapMarkerAlt
 } from "react-icons/fa";
 
 export default function Footer() {
+    const navLinks = [
+        { name: "Home", to: "Home" },
+        { name: "About", to: "About" },
+        { name: "Specializations", to: "HowDoIWork" },
+        { name: "Projects", to: "Projects" },
+        { name: "Insights", to: "Insights" },
+        { name: "Contact", to: "Contact" },
+    ];
+
     return (
-        <footer className="bg-[#121212] text-white overflow-hidden relative pb-7 pt-14 px-6 md:px-16 border-t border-gray-800">
+        <footer className="bg-[#050505] text-white overflow-hidden relative pb-12 pt-20 px-6 md:px-16 border-t border-white/5">
+            {/* Background Atmosphere */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#F5D76E] opacity-[0.02] rounded-full blur-[120px] pointer-events-none"></div>
 
-            <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-[#1595b6] opacity-20 rounded-full blur-3xl z-0"></div>
-            <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-[#1595b6] opacity-20 rounded-full blur-3xl z-0"></div>
-
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-between">
-                {/* Logo and Description */}
-                <div className="flex flex-col max-w-xs">
-                    <div className="flex flex-row items-center mb-4 gap-4">
-                        <div className="w-20 h-20 bg-gradient-to-l from-[#1595b6] to-[#1f2667cc] rounded-full flex items-center justify-center text-white font-extrabold shadow-md text-2xl mb-4">
-                            &lt;/&gt;
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-16">
+                    
+                    {/* Logo and Brand Mission */}
+                    <div className="lg:col-span-4 space-y-6">
+                        <div className="flex items-center space-x-3 group cursor-pointer">
+                            <div className="w-10 h-10 bg-[#F5D76E] rounded flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
+                                <span className="text-black font-bold text-xl">M</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-xl tracking-tight text-white leading-tight">
+                                    <span className="font-light">Mesum</span><span className="font-bold text-[#F5D76E]">Ali</span>
+                                </span>
+                                <span className="text-[9px] uppercase tracking-[0.3em] text-[#E5E5E5]/40 font-semibold mt-0.5">Software Engineering Student</span>
+                            </div>
                         </div>
-                        <h1 className="text-2xl md:text-4xl font-bold">Mesum.dev</h1>
+                        <p className="text-sm text-[#E5E5E5]/60 leading-relaxed font-light max-w-sm">
+                            Architecting autonomous AI ecosystems and high-performance digital solutions. Bridging the gap between intelligent reasoning and scalable software.
+                        </p>
+                        <div className="flex gap-4">
+                            {[
+                                { icon: <FaLinkedinIn size={16} />, url: "https://www.linkedin.com/in/mesumali-dev/", label: "LinkedIn" },
+                                { icon: <FaGithub size={16} />, url: "https://github.com/mesumali-dev/", label: "GitHub" },
+                                { icon: <FaTwitter size={16} />, url: "https://x.com/mesumali_dev", label: "Twitter" }
+                            ].map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 bg-white/5 border border-white/5 rounded-xl flex items-center justify-center text-[#E5E5E5]/60 hover:text-[#F5D76E] hover:border-[#F5D76E]/20 transition-all duration-300"
+                                    aria-label={social.label}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
-                    <p className="text-sm leading-relaxed">
-                        Empowering digital experiences with clean, maintainable code and
-                        sustainable web solutions.
+
+                    {/* Navigation Columns */}
+                    <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12">
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold mb-6">Navigation</h4>
+                            <ul className="space-y-4">
+                                {navLinks.map((link) => (
+                                    <li key={link.to}>
+                                        <Link
+                                            to={link.to}
+                                            smooth={true}
+                                            duration={500}
+                                            offset={-80}
+                                            className="text-sm text-[#E5E5E5]/50 hover:text-[#F5D76E] transition-colors cursor-pointer font-medium"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold mb-6">Core Focus</h4>
+                            <ul className="space-y-4 text-sm text-[#E5E5E5]/50 font-light">
+                                <li className="hover:text-white transition-colors cursor-default">AI Agent Orchestration</li>
+                                <li className="hover:text-white transition-colors cursor-default">Multi-Agent Systems</li>
+                                <li className="hover:text-white transition-colors cursor-default">Full Stack Architecture</li>
+                                <li className="hover:text-white transition-colors cursor-default">Autonomous Automation</li>
+                            </ul>
+                        </div>
+
+                        <div className="col-span-2 md:col-span-1">
+                            <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold mb-6">Reach Out</h4>
+                            <ul className="space-y-4">
+                                <li className="flex items-center space-x-3 text-[#E5E5E5]/70">
+                                    <FaPhoneAlt size={12} className="text-[#F5D76E]/60" />
+                                    <span className="text-sm font-light">+92 331 2096750</span>
+                                </li>
+                                <li className="flex items-center space-x-3 text-[#E5E5E5]/70">
+                                    <FaEnvelope size={12} className="text-[#F5D76E]/60" />
+                                    <span className="text-sm font-light">s.mesumali99@gmail.com</span>
+                                </li>
+                                <li className="flex items-center space-x-3 text-[#E5E5E5]/70">
+                                    <FaMapMarkerAlt size={12} className="text-[#F5D76E]/60" />
+                                    <span className="text-sm font-light">Karachi, Pakistan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[10px] text-[#E5E5E5]/30 uppercase tracking-widest font-bold">
+                        © 2026 MesumAli. Engineered with Precision.
                     </p>
-                </div>
-
-                {/* Quick Links */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:w-3/5">
-                    <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#1595b6]">Quick Links</h3>
-                        <ul className="space-y-3 text-sm">
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaHome /> Home
-                            </li>
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaUserAlt /> About
-                            </li>
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaProjectDiagram /> Project
-                            </li>
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaCog /> How do I work
-                            </li>
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaLaptopCode /> Skills
-                            </li>
-                            <li className="flex items-center gap-2 hover:text-[#1595b6] cursor-pointer transition-colors">
-                                <FaEnvelope /> Contact
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Why Us */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#1595b6]">Why Choose Us?</h3>
-                        <ul className="space-y-3 text-sm">
-                            <li className="flex items-center gap-2">Clean Code</li>
-                            <li className="flex items-center gap-2">Responsive Design</li>
-                            <li className="flex items-center gap-2">Modern Technologies</li>
-                        </ul>
-
-                        {/* Social Media Icons */}
-                        <div className="flex gap-4 mt-6 text-[#1595b6]">
-                            <a
-                                href="https://www.linkedin.com/in/mesumaliofficial/"
-                                target="_blank"
-                                aria-label="LinkedIn"
-                                className="bg-black p-2 rounded-md text-white hover:text-blue-700 transition"
-                            >
-                                <FaLinkedinIn size={20} />
-                            </a>
-                            <a
-                                href="https://x.com/smesumofficial"
-                                aria-label="Twitter"
-                                className="bg-black p-2 rounded-md text-white hover:text-blue-500 transition"
-                            >
-                                <FaTwitter size={20} />
-                            </a>
-                            <a
-                                href="https://github.com/mesumaliofficial"
-                                target="_blank"
-                                aria-label="GitHub"
-                                className="bg-black p-2 rounded-md text-white hover:text-gray-400 transition"
-                            >
-                                <FaGithub size={20} />
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Contact Info */}
-                    <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#1595b6]">Contact</h3>
-                        <ul className="space-y-3 text-sm">
-                            <li className="flex items-center gap-2">
-                                Phone: <span className="font-medium">+92 331 2096750</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                Email: <span className="font-medium">syedmesumjaffary@gmail.com</span>
-                            </li>
-                        </ul>
+                    <div className="flex items-center space-x-8 text-[10px] uppercase tracking-[0.2em] text-[#E5E5E5]/30 font-bold">
+                        <span className="hover:text-[#F5D76E] transition-colors cursor-pointer">Privacy Protocol</span>
+                        <span className="hover:text-[#F5D76E] transition-colors cursor-pointer">System Terms</span>
                     </div>
                 </div>
-            </div>
-
-            {/* Copyright */}
-            <div className="mt-10 pt-6 border-t border-gray-500 text-center text-sm">
-                © 2025 Mesum.dev. All Rights Reserved.
             </div>
         </footer>
     );

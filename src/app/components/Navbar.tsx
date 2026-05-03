@@ -26,9 +26,9 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", to: "Home" },
         { name: "About", to: "About" },
-        { name: "Process", to: "HowDoIWork" },
+        { name: "Specializations", to: "HowDoIWork" },
         { name: "Projects", to: "Projects" },
-        { name: "Skills", to: "Skills" },
+        { name: "Insights", to: "Insights" },
         { name: "Contact", to: "Contact" },
     ];
 
@@ -131,9 +131,9 @@ const Navbar = () => {
                     <div className="mt-auto space-y-8">
                         <div className="flex space-x-6">
                             {[
-                                { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/mesumaliofficial/" },
-                                { icon: <FaTwitter size={24} />, url: "https://x.com/smesumofficial" },
-                                { icon: <FaGithub size={24} />, url: "https://github.com/mesumaliofficial" }
+                                { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/mesumali-dev/" },
+                                { icon: <FaTwitter size={24} />, url: "https://x.com/mesumali_dev" },
+                                { icon: <FaGithub size={24} />, url: "https://github.com/mesumali-dev/" }
                             ].map((social, index) => (
                                 <a key={index} href={social.url} className="text-white/40 hover:text-[#F5D76E] transition-colors">
                                     {social.icon}
