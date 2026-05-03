@@ -33,35 +33,39 @@ export const metadata: Metadata = {
     "GIAIC Trainee",
     "Tech Innovation",
   ],
-  authors: [{ name: "Mesum Ali", url: "https://mesumdev.vercel.app" }],
+  authors: [{ name: "Mesum Ali", url: "https://www.mesumali.xyz" }],
   creator: "Mesum Ali",
+  metadataBase: new URL("https://www.mesumali.xyz"),
+  alternates: {
+    canonical: "/",
+  },
   robots: "index, follow",
   openGraph: {
     type: "website",
-    url: "https://mesumdev.vercel.app/",
-    title: "Mesum Ali - Full Stack Developer | AI Developer | GIAIC Trainee",
+    url: "https://www.mesumali.xyz",
+    title: "Mesum Ali - Full Stack & AI Agents Developer",
     description:
-      "Passionate about building dynamic websites and AI-powered applications. Software Engineering student and Agentic AI Developer with hands-on experience.",
+      "Expert in building autonomous AI agents and scalable full-stack architectures. Architecting the future of intelligent systems.",
     images: [
       {
-        url: "https://mesumdev.vercel.app/",
+        url: "/mesum.png",
         width: 1200,
         height: 630,
-        alt: "Mesum Ali Portfolio",
+        alt: "Mesum Ali - Software Engineer & AI Developer",
       },
     ],
-    siteName: "Mesum Ali - Developer Portfolio",
+    siteName: "Mesum Ali Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@syedmesumjaffary",
-    title: "Mesum Ali - Full Stack Developer | AI Developer | GIAIC Trainee",
+    creator: "@mesumali_dev",
+    title: "Mesum Ali - Full Stack & AI Agents Developer",
     description:
-      "Full Stack Developer & Agentic AI Developer with 1+ year experience, focused on web development and AI solutions.",
-    images: ["https://mesumdev.vercel.app"],
+      "Expert in building autonomous AI agents and scalable full-stack architectures.",
+    images: ["/mesum.png"],
   },
   icons: {
-    icon: "public/Favicon.ico",
+    icon: "/icon.svg",
   },
 };
 
@@ -70,8 +74,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Syed Mesum Ali Shah",
+    "url": "https://www.mesumali.xyz",
+    "image": "https://www.mesumali.xyz/mesum.png",
+    "sameAs": [
+      "https://github.com/mesumali-dev/",
+      "https://www.linkedin.com/in/mesumali-dev/",
+      "https://x.com/mesumali_dev"
+    ],
+    "jobTitle": "Full Stack & AI Agents Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "description": "Software Engineering Student and AI Developer specializing in autonomous agents and production-ready full-stack applications."
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
