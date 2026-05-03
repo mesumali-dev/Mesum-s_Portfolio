@@ -41,12 +41,16 @@ export default function Hero() {
               >
                 View Projects
               </Link>
-              <button
-                className="group px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-[#F5D76E]/40 text-[#E5E5E5] hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+              <Link
+                to="Contact"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="group px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-[#F5D76E]/40 text-[#E5E5E5] hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer"
               >
-                <span>Download CV</span>
-                <LuDownload size={14} className="group-hover:translate-y-0.5 transition-transform duration-300 text-[#F5D76E]" />
-              </button>
+                <span>Get in Touch</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#F5D76E] group-hover:animate-ping"></div>
+              </Link>
             </div>
 
             {/* Social Integration */}

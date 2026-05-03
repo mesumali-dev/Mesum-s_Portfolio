@@ -69,12 +69,14 @@ const Navbar = () => {
 
                 {/* Right Side: CTA */}
                 <div className="hidden md:flex items-center">
-                    <button
+                    <a
+                        href="/Resume.pdf"
+                        download="Mesum_Ali_Resume.pdf"
                         className="group flex items-center space-x-2 bg-transparent border-2 border-[#F5D76E]/20 hover:border-[#F5D76E] hover:bg-[#F5D76E]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
                     >
                         <span>Download CV</span>
                         <LuDownload size={14} className="group-hover:translate-y-0.5 transition-transform duration-300 text-[#F5D76E]" />
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -139,13 +141,15 @@ const Navbar = () => {
                                 </a>
                             ))}
                         </div>
-                        <button
+                        <a
+                            href="/Resume.pdf"
+                            download="Mesum_Ali_Resume.pdf"
                             className="group w-full flex items-center justify-center space-x-3 bg-[#F5D76E] text-black py-4 rounded-2xl font-bold text-lg shadow-xl shadow-[#F5D76E]/10 transition-all hover:bg-[#d4b74e]"
                             onClick={() => setIsOpen(false)}
                         >
                             <span>Download CV</span>
                             <LuDownload size={20} className="group-hover:translate-y-0.5 transition-transform duration-300" />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
