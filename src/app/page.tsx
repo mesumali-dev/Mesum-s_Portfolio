@@ -415,7 +415,7 @@ const ProjectCard = ({ title, description, imageSrc, techIcons, link, alt, targe
           href={link}
           target={target || "_blank"}
           rel="noopener noreferrer"
-          className="flex items-center text-[#00ccff] border border-[#00ccff]/40 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#00ccff]/10 transition-colors duration-300"
+          className="flex items-center text-[#0078D4] border-2 border-[#0078D4]/20 px-6 py-2 rounded-full text-sm font-bold hover:bg-[#0078D4] hover:text-white transition-all duration-300"
           aria-label={`View ${title} project`}
         >
           View Project <FaExternalLinkAlt size={12} className="ml-2" />

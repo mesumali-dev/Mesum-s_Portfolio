@@ -2,7 +2,7 @@
 
 import { Link } from 'react-scroll';
 import { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 
@@ -92,9 +92,10 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         offset={-80}
-                        className="bg-[#0078D4] hover:bg-[#005a9e] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg shadow-[#0078D4]/20 cursor-pointer"
+                        className="group flex items-center space-x-2 bg-transparent border-2 border-[#0078D4]/20 hover:border-[#0078D4] hover:bg-[#0078D4]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
                     >
-                        Work with me
+                        <span>Work with me</span>
+                        <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300 text-[#0078D4]" />
                     </Link>
                 </div>
 
