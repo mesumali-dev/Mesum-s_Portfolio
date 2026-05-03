@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import project_2 from "@/app/assets/img/Project_2.png";
-import project_3 from "@/app/assets/img/Project_3.png";
-import flowdos from "../../../public/flowdos.png";
+import project_2 from "@/assets/img/Project_2.png";
+import project_3 from "@/assets/img/Project_3.png";
+import flowdos from "@/assets/img/flowdos.png";
 
 export interface Project {
   title: string;
