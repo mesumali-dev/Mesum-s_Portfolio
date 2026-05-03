@@ -2,9 +2,9 @@
 
 import { Link } from 'react-scroll';
 import { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { LuMenu } from "react-icons/lu";
+import { LuMenu, LuDownload } from "react-icons/lu";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +74,7 @@ const Navbar = () => {
                         className="group flex items-center space-x-2 bg-transparent border-2 border-[#F5D76E]/20 hover:border-[#F5D76E] hover:bg-[#F5D76E]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
                     >
                         <span>Download CV</span>
-                        <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300 text-[#F5D76E]" />
+                        <LuDownload size={14} className="group-hover:translate-y-0.5 transition-transform duration-300 text-[#F5D76E]" />
                     </button>
                 </div>
 
@@ -90,18 +90,18 @@ const Navbar = () => {
 
             {/* Mobile Sidebar Overlay */}
             <div
-                className={`fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[105] lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                className={`fixed inset-0 bg-black/60 backdrop-blur-md z-[105] lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
                 onClick={() => setIsOpen(false)}
             />
 
             {/* Mobile Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-full sm:w-[350px] bg-slate-900 z-[108] lg:hidden transition-transform duration-500 ease-in-out shadow-2xl ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed top-0 right-0 h-full w-full sm:w-[350px] bg-[#0a0a0a] z-[108] lg:hidden transition-transform duration-500 ease-in-out shadow-2xl ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
                 <div className="flex flex-col h-full p-8">
                     <div className="flex justify-between items-center mb-12">
                         <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-[#0078D4] rounded-lg flex items-center justify-center text-white font-bold text-sm">M</div>
+                            <div className="w-8 h-8 bg-[#F5D76E] rounded-lg flex items-center justify-center text-black font-bold text-sm">M</div>
                             <span className="text-white font-bold tracking-tight">MESUM ALI</span>
                         </div>
                         <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
@@ -118,8 +118,8 @@ const Navbar = () => {
                                     smooth={true}
                                     offset={-80}
                                     duration={500}
-                                    activeClass="text-[#0078D4] bg-[#0078D4]/10"
-                                    className="text-2xl text-white/80 hover:text-white font-bold transition-all duration-300 block py-3 px-4 rounded-xl"
+                                    activeClass="text-[#F5D76E] bg-[#F5D76E]/10"
+                                    className="text-2xl text-white/80 hover:text-[#F5D76E] font-bold transition-all duration-300 block py-3 px-4 rounded-xl"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
@@ -135,16 +135,17 @@ const Navbar = () => {
                                 { icon: <FaTwitter size={24} />, url: "https://x.com/smesumofficial" },
                                 { icon: <FaGithub size={24} />, url: "https://github.com/mesumaliofficial" }
                             ].map((social, index) => (
-                                <a key={index} href={social.url} className="text-white/40 hover:text-[#0078D4] transition-colors">
+                                <a key={index} href={social.url} className="text-white/40 hover:text-[#F5D76E] transition-colors">
                                     {social.icon}
                                 </a>
                             ))}
                         </div>
                         <button 
-                            className="w-full bg-[#0078D4] text-white py-4 rounded-2xl font-bold text-lg shadow-xl shadow-[#0078D4]/20"
+                            className="group w-full flex items-center justify-center space-x-3 bg-[#F5D76E] text-black py-4 rounded-2xl font-bold text-lg shadow-xl shadow-[#F5D76E]/10 transition-all hover:bg-[#d4b74e]"
                             onClick={() => setIsOpen(false)}
                         >
-                            Download Resume
+                            <span>Download CV</span>
+                            <LuDownload size={20} className="group-hover:translate-y-0.5 transition-transform duration-300" />
                         </button>
                     </div>
                 </div>
