@@ -38,12 +38,12 @@ export default function Home() {
 
       <Element name="Home">
         <div className="bg-[#050505] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
-            {/* AI-Inspired Background Elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-                <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#F5D76E] opacity-[0.04] rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-[#F5D76E] opacity-[0.03] rounded-full blur-[100px]"></div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02]"></div>
-            </div>
+          {/* AI-Inspired Background Elements */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+            <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#F5D76E] opacity-[0.04] rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-[#F5D76E] opacity-[0.03] rounded-full blur-[100px]"></div>
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02]"></div>
+          </div>
 
           <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -54,9 +54,9 @@ export default function Home() {
                 <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F5D76E] via-[#F5D76E] to-[#E5E5E5] mb-6">
                   Full Stack & AI Developer
                 </h2>
-                
+
                 <p className="max-w-xl text-base text-[#E5E5E5]/70 mb-8 leading-relaxed font-light">
-                    Architecting intelligent web systems and autonomous business architectures. Expert in bridging the gap between LLMs and production-ready software.
+                  Architecting intelligent web systems and autonomous business architectures. Expert in bridging the gap between LLMs and production-ready software.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="200">
@@ -79,24 +79,24 @@ export default function Home() {
 
                 {/* Social Integration */}
                 <div className="mt-10 flex flex-wrap lg:justify-start justify-center items-center gap-6" data-aos="fade-up" data-aos-delay="400">
-                    {[
-                        { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/mesumali-dev/", label: "LinkedIn" },
-                        { icon: <FaGithub size={20} />, url: "https://github.com/mesumali-dev/", label: "GitHub" },
-                        { icon: <FaTwitter size={20} />, url: "https://x.com/mesumali_dev", label: "Twitter" }
-                    ].map((social, i) => (
-                        <a 
-                            key={i} 
-                            href={social.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-[#E5E5E5]/40 hover:text-[#F5D76E] transition-all duration-300 transform hover:-translate-y-1"
-                            aria-label={social.label}
-                        >
-                            {social.icon}
-                        </a>
-                    ))}
-                    <div className="w-12 h-[1px] bg-white/10 hidden sm:block"></div>
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold hidden sm:block">Connect with me</span>
+                  {[
+                    { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/mesumali-dev/", label: "LinkedIn" },
+                    { icon: <FaGithub size={20} />, url: "https://github.com/mesumali-dev/", label: "GitHub" },
+                    { icon: <FaTwitter size={20} />, url: "https://x.com/mesumali_dev", label: "Twitter" }
+                  ].map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#E5E5E5]/40 hover:text-[#F5D76E] transition-all duration-300 transform hover:-translate-y-1"
+                      aria-label={social.label}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                  <div className="w-12 h-[1px] bg-white/10 hidden sm:block"></div>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold hidden sm:block">Connect with me</span>
                 </div>
               </div>
 
@@ -197,32 +197,32 @@ export default function Home() {
               <div className="lg:col-span-7" data-aos="fade-left">
                 <div className="bg-white/[0.02] border border-white/5 rounded-[32px] p-8 md:p-12 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#F5D76E] opacity-[0.02] blur-3xl"></div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4">
                     Technical <span className="text-[#F5D76E]">Arsenal</span>
                   </h3>
 
                   <div className="space-y-8">
                     {[
-                      { 
-                        category: "AI & Agents", 
-                        skills: ["OpenAI Agents Python SDK", "Multi-Agent Orchestration", "Spec-Driven Development (SpeckitPlus)", "n8n Workflow Automation"] 
+                      {
+                        category: "AI & Agents",
+                        skills: ["OpenAI Agents Python SDK", "Multi-Agent Orchestration", "Spec-Driven Development (SpeckitPlus)", "n8n Workflow Automation"]
                       },
-                      { 
-                        category: "Frontend Architecture", 
-                        skills: ["Next.js (App Router)", "React.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"] 
+                      {
+                        category: "Frontend Architecture",
+                        skills: ["Next.js (App Router)", "React.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"]
                       },
-                      { 
-                        category: "Backend & Systems", 
-                        skills: ["Python", "FastAPI", "Node.js", "RESTful API Design", "JWT Authentication"] 
+                      {
+                        category: "Backend & Systems",
+                        skills: ["Python", "FastAPI", "Node.js", "RESTful API Design", "JWT Authentication"]
                       },
-                      { 
-                        category: "Databases", 
-                        skills: ["PostgreSQL (Neon)", "Prisma (ORM)", "SQLModel", "Alembic (Migrations)"] 
+                      {
+                        category: "Databases",
+                        skills: ["PostgreSQL (Neon)", "Prisma (ORM)", "SQLModel", "Alembic (Migrations)"]
                       },
-                      { 
-                        category: "DevOps & Tools", 
-                        skills: ["Docker", "Git/GitHub", "Vercel", "Hugging Face", "Postman", "Linux", "AI Observability Tools"] 
+                      {
+                        category: "DevOps & Tools",
+                        skills: ["Docker", "Git/GitHub", "Vercel", "Hugging Face", "Postman", "Linux", "AI Observability Tools"]
                       }
                     ].map((group, i) => (
                       <div key={i}>
@@ -283,22 +283,20 @@ export default function Home() {
                   key={i}
                   data-aos="fade-up"
                   data-aos-delay={pillar.delay}
-                  className={`group bg-white/[0.02] border transition-all duration-500 p-10 rounded-[40px] relative overflow-hidden ${
-                    i === 1 
-                    ? "border-[#F5D76E]/40 -translate-y-2 shadow-[0_20px_50px_rgba(245,215,110,0.1)] bg-white/[0.04]" 
-                    : "border-white/5"
-                  }`}
+                  className={`group bg-white/[0.02] border transition-all duration-500 p-10 rounded-[40px] relative overflow-hidden ${i === 1
+                      ? "border-[#F5D76E]/40 -translate-y-2 shadow-[0_20px_50px_rgba(245,215,110,0.1)] bg-white/[0.04]"
+                      : "border-white/5"
+                    }`}
                 >
                   <div className={`absolute top-0 right-0 w-32 h-32 bg-[#F5D76E] blur-3xl transition-opacity ${i === 1 ? "opacity-[0.05]" : "opacity-[0.02] group-hover:opacity-[0.05]"}`}></div>
-                  
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 ${
-                    i === 1 
-                    ? "bg-[#F5D76E]/20 border-[#F5D76E]/20 scale-110" 
-                    : "bg-[#F5D76E]/10 border-[#F5D76E]/10 group-hover:scale-110"
-                  }`}>
+
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 ${i === 1
+                      ? "bg-[#F5D76E]/20 border-[#F5D76E]/20 scale-110"
+                      : "bg-[#F5D76E]/10 border-[#F5D76E]/10 group-hover:scale-110"
+                    }`}>
                     {pillar.icon}
                   </div>
-                  
+
                   <h3 className={`text-xl font-bold mb-4 transition-colors ${i === 1 ? "text-[#F5D76E]" : "text-white group-hover:text-[#F5D76E]"}`}>{pillar.title}</h3>
                   <p className="text-[#E5E5E5]/60 text-sm leading-relaxed font-light">
                     {pillar.desc}
@@ -355,7 +353,7 @@ export default function Home() {
               <div className="lg:col-span-8">
                 <div className="bg-white/[0.01] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group hover:border-[#F5D76E]/20 transition-all duration-500">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-[#F5D76E] opacity-[0.01] group-hover:opacity-[0.03] blur-3xl transition-opacity"></div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {["Workflow Optimization", "System Design", "Product Thinking"].map((tag, i) => (
                       <span key={i} className="px-3 py-1 bg-[#F5D76E]/5 border border-[#F5D76E]/10 rounded-full text-[9px] font-bold text-[#F5D76E] uppercase tracking-wider">
@@ -367,12 +365,12 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-tight">
                     Refining Digital Ecosystems: From Logic to <span className="text-[#F5D76E]">Impact</span>
                   </h3>
-                  
+
                   <p className="text-[#E5E5E5]/70 text-base leading-relaxed font-light mb-8">
                     Exploring the intersection of high-performance architecture and user-centric design. I dive deep into how optimized workflows drive business value in modern AI-integrated environments.
                   </p>
 
-                  <a 
+                  <a
                     href="https://www.linkedin.com/posts/mesumali-dev_workflowoptimization-systemdesign-productthinking-ugcPost-7412098324599730176-RjfK"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -383,7 +381,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="lg:col-span-4 hidden lg:block">
                 <div className="relative">
                   <div className="absolute -inset-10 bg-[#F5D76E] opacity-[0.03] blur-[80px] rounded-full"></div>
@@ -398,7 +396,7 @@ export default function Home() {
       </Element>
 
       <Element name="Contact">
-        <ContactSection/>
+        <ContactSection />
       </Element>
 
       <Footer />
@@ -422,72 +420,72 @@ const ProjectCard = ({ title, category, description, imageSrc, techStack, techIc
   <div className="group w-full bg-[#0a0a0a] border border-white/5 rounded-[32px] p-1.5 transition-all duration-700 hover:border-[#F5D76E]/30 relative" data-aos="fade-up">
     {/* Inner Card Container */}
     <div className="bg-[#050505] rounded-[28px] p-4 h-full relative overflow-hidden flex flex-col">
-        {/* Subtle Glow */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-[#F5D76E] opacity-0 group-hover:opacity-[0.05] blur-[60px] transition-opacity duration-700"></div>
-        
-        {/* Image Container */}
-        <div className="h-48 w-full rounded-[22px] overflow-hidden relative mb-5 shadow-2xl shrink-0">
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
-            <Image
-                alt={alt}
-                src={imageSrc}
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100"
-                loading="lazy"
-            />
-            {/* Status Tag */}
-            <div className="absolute top-3 right-3 z-20">
-                <span className="flex items-center space-x-1.5 bg-black/60 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full text-[8px] font-bold text-white uppercase tracking-widest">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#34A853] animate-pulse"></span>
-                    <span>Live</span>
-                </span>
-            </div>
+      {/* Subtle Glow */}
+      <div className="absolute top-0 right-0 w-40 h-40 bg-[#F5D76E] opacity-0 group-hover:opacity-[0.05] blur-[60px] transition-opacity duration-700"></div>
+
+      {/* Image Container */}
+      <div className="h-48 w-full rounded-[22px] overflow-hidden relative mb-5 shadow-2xl shrink-0">
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+        <Image
+          alt={alt}
+          src={imageSrc}
+          fill
+          className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100"
+          loading="lazy"
+        />
+        {/* Status Tag */}
+        <div className="absolute top-3 right-3 z-20">
+          <span className="flex items-center space-x-1.5 bg-black/60 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full text-[8px] font-bold text-white uppercase tracking-widest">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#34A853] animate-pulse"></span>
+            <span>Live</span>
+          </span>
+        </div>
+      </div>
+
+      <div className="flex flex-col flex-grow px-1">
+        <div className="mb-3">
+          <div className="flex items-center space-x-2 mb-1.5">
+            <div className="w-5 h-[1px] bg-[#F5D76E]/40"></div>
+            <p className="text-[8px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold">{category}</p>
+          </div>
+          <h3 className="text-lg font-bold text-white group-hover:text-[#F5D76E] transition-colors duration-500 tracking-tight">{title}</h3>
         </div>
 
-        <div className="flex flex-col flex-grow px-1">
-            <div className="mb-3">
-                <div className="flex items-center space-x-2 mb-1.5">
-                    <div className="w-5 h-[1px] bg-[#F5D76E]/40"></div>
-                    <p className="text-[8px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold">{category}</p>
+        <p className="text-xs text-[#E5E5E5]/60 leading-relaxed font-light mb-5 line-clamp-2">
+          {description}
+        </p>
+
+        {/* Tech Stack Badges */}
+        <div className="flex flex-wrap gap-1.5 mb-6">
+          {techStack.map((tech, index) => (
+            <span key={index} className="px-2.5 py-0.5 bg-white/5 border border-white/5 rounded-lg text-[9px] font-bold text-[#E5E5E5]/40 group-hover:text-[#F5D76E]/80 transition-colors uppercase tracking-wider">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-auto pt-5 border-t border-white/5 flex flex-row justify-between items-center">
+          {techIcons && (
+            <div className="flex items-center -space-x-1">
+              {techIcons.slice(0, 4).map((icon, index) => (
+                <div key={index} className="w-7 h-7 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center transition-transform hover:-translate-y-1 hover:z-30 relative z-20">
+                  <img src={icon.src} alt={icon.alt} className="w-3.5 h-3.5 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-[#F5D76E] transition-colors duration-500 tracking-tight">{title}</h3>
+              ))}
             </div>
-            
-            <p className="text-xs text-[#E5E5E5]/60 leading-relaxed font-light mb-5 line-clamp-2">
-                {description}
-            </p>
-
-            {/* Tech Stack Badges */}
-            <div className="flex flex-wrap gap-1.5 mb-6">
-                {techStack.map((tech, index) => (
-                    <span key={index} className="px-2.5 py-0.5 bg-white/5 border border-white/5 rounded-lg text-[9px] font-bold text-[#E5E5E5]/40 group-hover:text-[#F5D76E]/80 transition-colors uppercase tracking-wider">
-                        {tech}
-                    </span>
-                ))}
-            </div>
-            
-            <div className="mt-auto pt-5 border-t border-white/5 flex flex-row justify-between items-center">
-                {techIcons && (
-                    <div className="flex items-center -space-x-1">
-                        {techIcons.slice(0, 4).map((icon, index) => (
-                            <div key={index} className="w-7 h-7 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center transition-transform hover:-translate-y-1 hover:z-30 relative z-20">
-                                <img src={icon.src} alt={icon.alt} className="w-3.5 h-3.5 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-                            </div>
-                        ))}
-                    </div>
-                )}
-                <a
-                    href={link}
-                    target={target || "_blank"}
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-white/40 hover:text-[#F5D76E] transition-all duration-300 text-[9px] font-bold uppercase tracking-widest group/btn"
-                    aria-label={`View ${title} project`}
-                >
-                    <span>View Site</span>
-                    <FaExternalLinkAlt size={8} className="group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform" />
-                </a>
-            </div>
+          )}
+          <a
+            href={link}
+            target={target || "_blank"}
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 text-white/40 hover:text-[#F5D76E] transition-all duration-300 text-[9px] font-bold uppercase tracking-widest group/btn"
+            aria-label={`View ${title} project`}
+          >
+            <span>View Site</span>
+            <FaExternalLinkAlt size={8} className="group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform" />
+          </a>
         </div>
+      </div>
     </div>
   </div>
 );

@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 flex justify-center ${scrolled ? "pt-4" : "pt-0"}`}>
             <div className={`transition-all duration-500 flex justify-between items-center ${scrolled ? "w-[95%] md:w-[90%] lg:w-[85%] bg-[#0a0a0a]/90 backdrop-blur-xl py-3 px-8 rounded-full border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.8)]" : "w-full bg-transparent py-4 px-6 md:px-12"}`}>
-                
+
                 {/* Logo Section */}
                 <div className="flex items-center space-x-3 group cursor-pointer">
                     <div className="w-10 h-10 bg-[#F5D76E] rounded flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
@@ -45,7 +45,6 @@ const Navbar = () => {
                         <span className="text-xl tracking-tight text-white leading-tight">
                             <span className="font-light">Mesum</span><span className="font-bold text-[#F5D76E]">Ali</span>
                         </span>
-                        <span className="text-[9px] uppercase tracking-[0.3em] text-[#E5E5E5]/60 font-semibold mt-0.5">Software Engineering Student</span>
                     </div>
                 </div>
 
@@ -140,7 +139,7 @@ const Navbar = () => {
                                 </a>
                             ))}
                         </div>
-                        <button 
+                        <button
                             className="group w-full flex items-center justify-center space-x-3 bg-[#F5D76E] text-black py-4 rounded-2xl font-bold text-lg shadow-xl shadow-[#F5D76E]/10 transition-all hover:bg-[#d4b74e]"
                             onClick={() => setIsOpen(false)}
                         >
