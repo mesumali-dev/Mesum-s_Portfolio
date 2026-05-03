@@ -25,7 +25,7 @@ export default function Footer() {
 
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-16">
-                    
+
                     {/* Logo and Brand Mission */}
                     <div className="lg:col-span-4 space-y-6">
                         <div className="flex items-center space-x-3 group cursor-pointer">
@@ -36,7 +36,6 @@ export default function Footer() {
                                 <span className="text-xl tracking-tight text-white leading-tight">
                                     <span className="font-light">Mesum</span><span className="font-bold text-[#F5D76E]">Ali</span>
                                 </span>
-                                <span className="text-[9px] uppercase tracking-[0.3em] text-[#E5E5E5]/40 font-semibold mt-0.5">Software Engineering Student</span>
                             </div>
                         </div>
                         <p className="text-sm text-[#E5E5E5]/60 leading-relaxed font-light max-w-sm">
