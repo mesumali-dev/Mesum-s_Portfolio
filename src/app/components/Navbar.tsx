@@ -34,18 +34,18 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 flex justify-center ${scrolled ? "pt-4" : "pt-0"}`}>
-            <div className={`transition-all duration-500 flex justify-between items-center ${scrolled ? "w-[95%] md:w-[90%] lg:w-[85%] bg-slate-950/80 backdrop-blur-xl py-3 px-8 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]" : "w-full bg-transparent py-4 px-6 md:px-12"}`}>
+            <div className={`transition-all duration-500 flex justify-between items-center ${scrolled ? "w-[95%] md:w-[90%] lg:w-[85%] bg-[#0a0a0a]/90 backdrop-blur-xl py-3 px-8 rounded-full border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.8)]" : "w-full bg-transparent py-4 px-6 md:px-12"}`}>
                 
                 {/* Logo Section */}
                 <div className="flex items-center space-x-3 group cursor-pointer">
-                    <div className="w-10 h-10 bg-[#0078D4] rounded flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
-                        <span className="text-white font-bold text-xl">M</span>
+                    <div className="w-10 h-10 bg-[#F5D76E] rounded flex items-center justify-center transition-transform duration-300 group-hover:scale-95">
+                        <span className="text-black font-bold text-xl">M</span>
                     </div>
                     <div className="flex flex-col">
                         <span className="text-xl tracking-tight text-white leading-tight">
-                            <span className="font-light">Mesum</span><span className="font-bold text-[#0078D4]">Ali</span>
+                            <span className="font-light">Mesum</span><span className="font-bold text-[#F5D76E]">Ali</span>
                         </span>
-                        <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 font-semibold mt-0.5">Software Engineering Student</span>
+                        <span className="text-[9px] uppercase tracking-[0.3em] text-[#E5E5E5]/60 font-semibold mt-0.5">Software Engineering Student</span>
                     </div>
                 </div>
 
@@ -59,8 +59,8 @@ const Navbar = () => {
                                 smooth={true}
                                 offset={-80}
                                 duration={500}
-                                activeClass="bg-white/10 text-white"
-                                className="px-5 py-2 rounded-full text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-300 cursor-pointer"
+                                activeClass="bg-white/5 text-[#F5D76E]"
+                                className="px-5 py-2 rounded-full text-sm font-medium text-[#E5E5E5]/70 hover:text-white hover:bg-white/5 transition-all duration-300 cursor-pointer"
                             >
                                 {link.name}
                             </Link>
@@ -71,10 +71,10 @@ const Navbar = () => {
                 {/* Right Side: CTA */}
                 <div className="hidden md:flex items-center">
                     <button
-                        className="group flex items-center space-x-2 bg-transparent border-2 border-[#0078D4]/20 hover:border-[#0078D4] hover:bg-[#0078D4]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
+                        className="group flex items-center space-x-2 bg-transparent border-2 border-[#F5D76E]/20 hover:border-[#F5D76E] hover:bg-[#F5D76E]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
                     >
                         <span>Download CV</span>
-                        <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300 text-[#0078D4]" />
+                        <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300 text-[#F5D76E]" />
                     </button>
                 </div>
 

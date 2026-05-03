@@ -34,25 +34,25 @@ export default function Home() {
       </header>
 
       <Element name="Home">
-        <div className="bg-[#020617] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
+        <div className="bg-[#050505] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
             {/* AI-Inspired Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-                <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#0078D4] opacity-[0.07] rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-[#34A853] opacity-[0.05] rounded-full blur-[100px]"></div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
+                <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#F5D76E] opacity-[0.04] rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-[#F5D76E] opacity-[0.03] rounded-full blur-[100px]"></div>
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02]"></div>
             </div>
 
           <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 text-center lg:text-left" data-aos="fade-right">
                 <h1 className="text-4xl md:text-6xl font-light mb-2 tracking-tight">
-                  Hi, I’m <span className="font-bold text-white">Mesum<span className="text-[#0078D4]">Ali</span></span>
+                  Hi, I’m <span className="font-bold text-white">Mesum<span className="text-[#F5D76E]">Ali</span></span>
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0078D4] to-[#34A853] mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F5D76E] via-[#F5D76E] to-[#E5E5E5] mb-6">
                   Full Stack & AI Developer
                 </h2>
                 
-                <p className="max-w-xl text-base text-white/60 mb-8 leading-relaxed font-light">
+                <p className="max-w-xl text-base text-[#E5E5E5]/70 mb-8 leading-relaxed font-light">
                     Architecting intelligent web systems and scalable AI solutions. I bridge the gap between robust backend infrastructure and intuitive user experiences.
                 </p>
 
@@ -62,12 +62,12 @@ export default function Home() {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="bg-[#0078D4] hover:bg-[#005a9e] text-white px-10 py-3.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#0078D4]/20 cursor-pointer flex items-center justify-center"
+                    className="bg-[#F5D76E] hover:bg-[#d4b74e] text-black px-10 py-3.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#F5D76E]/20 cursor-pointer flex items-center justify-center"
                   >
                     View Projects
                   </Link>
                   <button
-                    className="px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-white/20 text-white/80 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
+                    className="px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-[#F5D76E]/40 text-[#E5E5E5] hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
                   >
                     Download Resume
                   </button>
@@ -78,27 +78,27 @@ export default function Home() {
                 <div className="relative">
                     {/* Decorative element behind image */}
                     <div className="absolute -inset-4 border border-white/5 rounded-[40px] rotate-3 z-0"></div>
-                    <div className="absolute -inset-4 border border-[#0078D4]/20 rounded-[40px] -rotate-3 z-0"></div>
+                    <div className="absolute -inset-4 border border-[#F5D76E]/10 rounded-[40px] -rotate-3 z-0"></div>
                     
                     <div className="relative z-10 w-64 h-80 md:w-72 md:h-[420px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
                         <Image 
                             src={pic} 
                             alt="Mesum Ali - Software Engineering Student" 
-                            className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                            className="w-full h-full object-cover grayscale-[0.4] hover:grayscale-0 transition-all duration-700"
                             priority
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
                     </div>
 
                     {/* AI Floating Card */}
-                    <div className="absolute -bottom-6 -right-6 md:-right-8 bg-slate-900/90 backdrop-blur-xl p-4 rounded-2xl border border-white/10 shadow-2xl z-20 max-w-[180px]" data-aos="fade-up" data-aos-delay="600">
+                    <div className="absolute -bottom-6 -right-6 md:-right-8 bg-[#0a0a0a]/90 backdrop-blur-xl p-4 rounded-2xl border border-white/10 shadow-2xl z-20 max-w-[180px]" data-aos="fade-up" data-aos-delay="600">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="w-7 h-7 rounded-lg bg-[#34A853]/20 flex items-center justify-center">
-                                <PiBrainLight className="text-[#34A853]" size={18} />
+                            <div className="w-7 h-7 rounded-lg bg-[#F5D76E]/10 flex items-center justify-center">
+                                <PiBrainLight className="text-[#F5D76E]" size={18} />
                             </div>
                             <span className="text-[11px] font-bold text-white">AI Engine</span>
                         </div>
-                        <p className="text-[9px] text-white/50 leading-relaxed">Implementing advanced LLM architectures for next-gen apps.</p>
+                        <p className="text-[9px] text-[#E5E5E5]/50 leading-relaxed">Implementing advanced LLM architectures for next-gen apps.</p>
                     </div>
                 </div>
               </div>
