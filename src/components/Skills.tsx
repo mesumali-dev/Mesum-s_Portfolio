@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function SkillsSection() {
   useEffect(() => {
@@ -54,10 +55,12 @@ export default function SkillsSection() {
               data-aos-delay={index * 100}
             >
               <div className="flex flex-col items-center gap-3">
-                <img
+                <Image
                   src={skill.icon}
                   alt={`${skill.name} icon`}
-                  className="w-12 h-12 object-contain"
+                  width={48}
+                  height={48}
+                  className="object-contain"
                 />
                 <h5 className="text-[#00ccff] font-medium text-base text-center">{skill.name}</h5>
               </div>

@@ -70,7 +70,13 @@ const ProjectCard = ({ title, category, description, imageSrc, techStack, techIc
             <div className="flex items-center -space-x-1">
               {techIcons.slice(0, 4).map((icon, index) => (
                 <div key={index} className="w-7 h-7 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center transition-transform hover:-translate-y-1 hover:z-30 relative z-20">
-                  <img src={icon.src} alt={icon.alt} className="w-3.5 h-3.5 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+                  <Image
+                    src={icon.src}
+                    alt={icon.alt}
+                    width={14}
+                    height={14}
+                    className="grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                  />
                 </div>
               ))}
             </div>
