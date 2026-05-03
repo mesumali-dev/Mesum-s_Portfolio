@@ -45,7 +45,7 @@ const Navbar = () => {
                         <span className="text-xl tracking-tight text-white leading-tight">
                             <span className="font-light">Mesum</span><span className="font-bold text-[#0078D4]">Ali</span>
                         </span>
-                        <span className="text-[9px] uppercase tracking-[0.4em] text-white/40 font-semibold mt-0.5">Software Engineer</span>
+                        <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 font-semibold mt-0.5">Software Engineering Student</span>
                     </div>
                 </div>
 
@@ -68,35 +68,14 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {/* Right Side: Social + CTA */}
-                <div className="hidden md:flex items-center space-x-6">
-                    <div className="flex items-center space-x-2">
-                        {[
-                            { icon: <FaLinkedin size={18} />, url: "https://www.linkedin.com/in/mesumaliofficial/", label: "LinkedIn" },
-                            { icon: <FaGithub size={18} />, url: "https://github.com/mesumaliofficial", label: "GitHub" }
-                        ].map((social, index) => (
-                            <a
-                                key={index}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-9 h-9 flex justify-center items-center text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-                                aria-label={social.label}
-                            >
-                                {social.icon}
-                            </a>
-                        ))}
-                    </div>
-                    <Link
-                        to="Contact"
-                        smooth={true}
-                        duration={500}
-                        offset={-80}
+                {/* Right Side: CTA */}
+                <div className="hidden md:flex items-center">
+                    <button
                         className="group flex items-center space-x-2 bg-transparent border-2 border-[#0078D4]/20 hover:border-[#0078D4] hover:bg-[#0078D4]/5 text-white px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer"
                     >
-                        <span>Work with me</span>
+                        <span>Download CV</span>
                         <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300 text-[#0078D4]" />
-                    </Link>
+                    </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}

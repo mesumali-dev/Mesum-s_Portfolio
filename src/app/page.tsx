@@ -45,14 +45,6 @@ export default function Home() {
           <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 text-center lg:text-left" data-aos="fade-right">
-                <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
-                    </span>
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/70">Available for Opportunities</span>
-                </div>
-                
                 <h1 className="text-4xl md:text-6xl font-light mb-2 tracking-tight">
                   Hi, I’m <span className="font-bold text-white">Mesum<span className="text-[#0078D4]">Ali</span></span>
                 </h1>
@@ -70,30 +62,15 @@ export default function Home() {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="bg-[#0078D4] hover:bg-[#005a9e] text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:-translate-y-1 shadow-xl shadow-[#0078D4]/20 cursor-pointer flex items-center justify-center"
+                    className="bg-[#0078D4] hover:bg-[#005a9e] text-white px-10 py-3.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#0078D4]/20 cursor-pointer flex items-center justify-center"
                   >
                     View Projects
                   </Link>
                   <button
-                    className="group relative px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+                    className="px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-white/20 text-white/80 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
                   >
-                    <span className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors"></span>
-                    <span className="absolute inset-0 border border-white/10 group-hover:border-[#0078D4]/30 rounded-xl transition-colors"></span>
-                    <span className="relative text-white/80 group-hover:text-white">Download Resume</span>
+                    Download Resume
                   </button>
-                </div>
-
-                <div className="mt-10 flex flex-wrap lg:justify-start justify-center items-center gap-3" data-aos="zoom-in" data-aos-delay="400">
-                    {[
-                        { label: "React/Next.js", color: "white/10" },
-                        { label: "Node.js", color: "white/10" },
-                        { label: "Python/AI", color: "#0078D4/20" },
-                        { label: "LLM Integration", color: "#34A853/20" }
-                    ].map((tag, i) => (
-                        <span key={i} className={`px-4 py-1.5 rounded-lg text-[11px] font-semibold tracking-wide border border-white/5 bg-white/5 text-white/70`}>
-                            {tag.label}
-                        </span>
-                    ))}
                 </div>
               </div>
 
@@ -106,7 +83,7 @@ export default function Home() {
                     <div className="relative z-10 w-64 h-80 md:w-72 md:h-[420px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
                         <Image 
                             src={pic} 
-                            alt="Mesum Ali - Full Stack & AI Developer" 
+                            alt="Mesum Ali - Software Engineering Student" 
                             className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                             priority
                         />
