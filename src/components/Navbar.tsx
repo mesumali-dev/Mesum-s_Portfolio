@@ -98,20 +98,22 @@ const Navbar = () => {
 
             {/* Mobile Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-full sm:w-[350px] bg-[#0a0a0a] z-[108] lg:hidden transition-transform duration-500 ease-in-out shadow-2xl ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed top-0 right-0 h-full w-[280px] sm:w-[350px] bg-[#0a0a0a] z-[108] lg:hidden transition-transform duration-500 ease-in-out shadow-2xl ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
                 <div className="flex flex-col h-full p-8">
-                    <div className="flex justify-between items-center mb-12">
+                    <div className="flex justify-between items-center mb-10">
                         <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-[#F5D76E] rounded-lg flex items-center justify-center text-black font-bold text-sm">M</div>
-                            <span className="text-white font-bold tracking-tight">MESUM ALI</span>
+                            <div className="w-9 h-9 bg-[#F5D76E] rounded flex items-center justify-center text-black font-bold text-lg">M</div>
+                            <span className="text-lg tracking-tight text-white leading-tight">
+                                <span className="font-light">Mesum</span><span className="font-bold text-[#F5D76E]">Ali</span>
+                            </span>
                         </div>
-                        <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
-                            <IoClose size={28} />
+                        <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white p-2">
+                            <IoClose size={24} />
                         </button>
                     </div>
 
-                    <ul className="space-y-4">
+                    <ul className="space-y-2">
                         {navLinks.map((link) => (
                             <li key={link.to}>
                                 <Link
@@ -120,8 +122,8 @@ const Navbar = () => {
                                     smooth={true}
                                     offset={-80}
                                     duration={500}
-                                    activeClass="text-[#F5D76E] bg-[#F5D76E]/10"
-                                    className="text-2xl text-white/80 hover:text-[#F5D76E] font-bold transition-all duration-300 block py-3 px-4 rounded-xl"
+                                    activeClass="text-[#F5D76E] bg-white/5"
+                                    className="text-lg text-[#E5E5E5]/80 hover:text-[#F5D76E] hover:bg-white/5 font-medium transition-all duration-300 block py-3 px-4 rounded-xl cursor-pointer"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
@@ -131,13 +133,13 @@ const Navbar = () => {
                     </ul>
 
                     <div className="mt-auto space-y-8">
-                        <div className="flex space-x-6">
+                        <div className="flex items-center space-x-6 px-4">
                             {[
-                                { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/mesumali-dev/" },
-                                { icon: <FaTwitter size={24} />, url: "https://x.com/mesumali_dev" },
-                                { icon: <FaGithub size={24} />, url: "https://github.com/mesumali-dev/" }
+                                { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/mesumali-dev/" },
+                                { icon: <FaTwitter size={20} />, url: "https://x.com/mesumali_dev" },
+                                { icon: <FaGithub size={20} />, url: "https://github.com/mesumali-dev/" }
                             ].map((social, index) => (
-                                <a key={index} href={social.url} className="text-white/40 hover:text-[#F5D76E] transition-colors">
+                                <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="text-[#E5E5E5]/40 hover:text-[#F5D76E] transition-all duration-300">
                                     {social.icon}
                                 </a>
                             ))}
@@ -145,11 +147,11 @@ const Navbar = () => {
                         <a
                             href="/Resume.pdf"
                             download="Mesum_Ali_Resume.pdf"
-                            className="group w-full flex items-center justify-center space-x-3 bg-[#F5D76E] text-black py-4 rounded-2xl font-bold text-lg shadow-xl shadow-[#F5D76E]/10 transition-all hover:bg-[#d4b74e]"
+                            className="group w-full flex items-center justify-center space-x-3 bg-[#F5D76E] hover:bg-[#d4b74e] text-black py-3.5 rounded-full font-bold text-sm shadow-lg shadow-[#F5D76E]/10 transition-all duration-300 transform hover:-translate-y-0.5"
                             onClick={() => setIsOpen(false)}
                         >
                             <span>Download CV</span>
-                            <LuDownload size={20} className="group-hover:translate-y-0.5 transition-transform duration-300" />
+                            <LuDownload size={16} className="group-hover:translate-y-0.5 transition-transform duration-300" />
                         </a>
                     </div>
                 </div>
