@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AosInitializer from "@/components/AosInitializer";
@@ -13,6 +13,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
+};
 
 export const metadata: Metadata = {
   title: "Mesum Ali - Full Stack Developer | AI Developer | GIAIC Trainee",
