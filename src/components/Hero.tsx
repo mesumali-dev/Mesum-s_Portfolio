@@ -19,7 +19,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl font-light mb-2 tracking-tight text-white">
               Hi, I’m <span className="font-bold">Mesum <span className="text-[#F5D76E]">Ali</span></span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F5D76E] via-[#F5D76E] to-[#E5E5E5] mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#F5D76E] via-[#F5D76E] to-[#E5E5E5] mb-6">
               Full Stack & AI Developer
             </h2>
 
@@ -61,7 +61,7 @@ export default function Hero() {
                   {social.icon}
                 </a>
               ))}
-              <div className="w-12 h-[1px] bg-white/10 hidden sm:block"></div>
+              <div className="w-12 h-px bg-white/10 hidden sm:block"></div>
               <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold hidden sm:block">Connect with me</span>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Hero() {
                   className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80"></div>
               </div>
 
               {/* AI Floating Card */}

@@ -51,7 +51,7 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div 
               key={index} 
-              className="group bg-white/[0.02] border border-white/5 rounded-[40px] p-8 md:p-12 transition-all duration-700 hover:border-[#F5D76E]/20 hover:bg-white/[0.04] relative"
+              className="group bg-white/2 border border-white/5 rounded-[40px] p-8 md:p-12 transition-all duration-700 hover:border-[#F5D76E]/20 hover:bg-white/4 relative"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >

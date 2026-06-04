@@ -68,7 +68,7 @@ export default function ContactSection() {
                                     <a 
                                         key={i} 
                                         href={contact.href}
-                                        className="group flex items-center p-3 bg-white/[0.01] border border-white/5 rounded-xl hover:border-[#F5D76E]/20 transition-all duration-300"
+                                        className="group flex items-center p-3 bg-white/1 border border-white/5 rounded-xl hover:border-[#F5D76E]/20 transition-all duration-300"
                                     >
                                         <div className="w-8 h-8 bg-[#F5D76E]/10 rounded-lg flex items-center justify-center text-[#F5D76E] border border-[#F5D76E]/10 group-hover:scale-105 transition-transform">
                                             {contact.icon}
@@ -106,7 +106,7 @@ export default function ContactSection() {
 
                         {/* Right Side: Premium Request Portal */}
                         <div className="lg:col-span-7" data-aos="fade-left">
-                            <div className="bg-white/[0.02] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden shadow-2xl">
+                            <div className="bg-white/2 border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden shadow-2xl">
                                 <div className="absolute top-0 left-0 w-32 h-32 bg-[#F5D76E] opacity-[0.01] blur-3xl"></div>
                                 
                                 <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
@@ -173,7 +173,7 @@ export default function ContactSection() {
 
                 {/* Success Modal */}
                 {showModal && (
-                    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-md px-6">
+                    <div className="fixed inset-0 z-200 flex items-center justify-center bg-black/80 backdrop-blur-md px-6">
                         <div className="bg-[#0a0a0a] border border-[#F5D76E]/20 p-12 rounded-[40px] text-center shadow-2xl max-w-md w-full" data-aos="zoom-in">
                             <div className="w-20 h-20 bg-[#F5D76E]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#F5D76E]/20">
                                 <LuSend size={32} className="text-[#F5D76E]" />

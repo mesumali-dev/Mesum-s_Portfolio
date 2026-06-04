@@ -16,7 +16,7 @@ export default function Insights() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" data-aos="fade-up">
           <div className="lg:col-span-8">
-            <div className="bg-white/[0.01] border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group hover:border-[#F5D76E]/20 transition-all duration-500">
+            <div className="bg-white/1 border border-white/5 rounded-[32px] p-6 md:p-10 relative overflow-hidden group hover:border-[#F5D76E]/20 transition-all duration-500">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#F5D76E] opacity-[0.01] group-hover:opacity-[0.03] blur-3xl transition-opacity"></div>
 
               <div className="flex flex-wrap gap-2 mb-6">
@@ -50,7 +50,7 @@ export default function Insights() {
           <div className="lg:col-span-4 hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-10 bg-[#F5D76E] opacity-[0.03] blur-[80px] rounded-full"></div>
-              <div className="text-[100px] font-black text-white/[0.015] select-none leading-none rotate-12">
+              <div className="text-[100px] font-black text-white/1.5 select-none leading-none rotate-12">
                 LOGIC
               </div>
             </div>

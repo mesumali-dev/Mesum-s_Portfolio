@@ -41,10 +41,10 @@ const ProjectCard = ({ title, category, description, imageSrc, techStack, techIc
         </div>
       </div>
 
-      <div className="flex flex-col flex-grow px-2">
+      <div className="flex flex-col grow px-2">
         <div className="mb-4">
           <div className="flex items-center space-x-2 mb-2">
-            <div className="w-5 h-[1px] bg-[#F5D76E]/40"></div>
+            <div className="w-5 h-px bg-[#F5D76E]/40"></div>
             <p className="text-[9px] uppercase tracking-[0.2em] text-[#F5D76E] font-bold">{category}</p>
           </div>
           <h3 className="text-xl font-bold text-white group-hover:text-[#F5D76E] transition-colors duration-500 tracking-tight leading-tight">{title}</h3>
@@ -105,7 +105,7 @@ export default function Projects() {
         {/* Heading */}
         <div className="mb-20 text-center lg:text-left" data-aos="fade-up">
           <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-            <div className="w-10 h-[1px] bg-[#F5D76E]/50"></div>
+            <div className="w-10 h-px bg-[#F5D76E]/50"></div>
             <span className="text-[#F5D76E] text-[10px] font-bold uppercase tracking-[0.3em]">Featured Portfolio</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">

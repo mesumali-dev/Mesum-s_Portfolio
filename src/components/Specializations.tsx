@@ -40,9 +40,9 @@ export default function Specializations() {
               key={i}
               data-aos="fade-up"
               data-aos-delay={pillar.delay}
-              className={`group bg-white/[0.02] border transition-all duration-500 p-10 rounded-[40px] relative overflow-hidden ${
+              className={`group bg-white/2 border transition-all duration-500 p-10 rounded-[40px] relative overflow-hidden ${
                 i === 1 
-                ? "border-[#F5D76E]/40 -translate-y-2 shadow-[0_20px_50px_rgba(245,215,110,0.1)] bg-white/[0.04]" 
+                ? "border-[#F5D76E]/40 -translate-y-2 shadow-[0_20px_50px_rgba(245,215,110,0.1)] bg-white/4" 
                 : "border-white/5"
               }`}
             >

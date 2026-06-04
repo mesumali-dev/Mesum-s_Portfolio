@@ -24,7 +24,7 @@ export default function About() {
           <div className="lg:col-span-5 space-y-12" data-aos="fade-right">
             <div>
               <h3 className="text-[#F5D76E] text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#F5D76E]/30"></span> Personal Details
+                <span className="w-8 h-px bg-[#F5D76E]/30"></span> Personal Details
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {[
@@ -43,7 +43,7 @@ export default function About() {
 
             <div>
               <h3 className="text-[#F5D76E] text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
-                <span className="w-8 h-[1px] bg-[#F5D76E]/30"></span> Education
+                <span className="w-8 h-px bg-[#F5D76E]/30"></span> Education
               </h3>
               <div className="space-y-6">
                 <div className="relative pl-6 border-l border-[#F5D76E]/20">
@@ -61,7 +61,7 @@ export default function About() {
 
           {/* Right Side: Technical Expertise */}
           <div className="lg:col-span-7" data-aos="fade-left">
-            <div className="bg-white/[0.02] border border-white/5 rounded-[32px] p-8 md:p-12 relative overflow-hidden">
+            <div className="bg-white/2 border border-white/5 rounded-[32px] p-8 md:p-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#F5D76E] opacity-[0.02] blur-3xl"></div>
 
               <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4">
