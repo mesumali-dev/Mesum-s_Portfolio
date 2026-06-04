@@ -1,21 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Element } from "react-scroll";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { LuSend } from "react-icons/lu";
+import { sendContactEmail } from "@/app/actions";
 
 export default function ContactSection() {
     const [showModal, setShowModal] = useState(false);
-
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -23,23 +14,21 @@ export default function ContactSection() {
         const formData = new FormData(form);
 
         const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            message: formData.get("message"),
+            name: String(formData.get("name") || ""),
+            email: String(formData.get("email") || ""),
+            phone: String(formData.get("phone") || ""),
+            message: String(formData.get("message") || ""),
         };
 
         try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
+            const res = await sendContactEmail(data);
             
-            if (res.ok) {
+            if (res.success) {
                 form.reset();
                 setShowModal(true);
                 setTimeout(() => setShowModal(false), 3000);
+            } else {
+                alert(res.message || "Failed to send message.");
             }
         } catch (error) {
             console.error("Error:", error);
@@ -48,8 +37,7 @@ export default function ContactSection() {
     };
 
     return (
-        <Element name="Contact">
-            <section id="Contact" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
+        <section id="Contact" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
                 {/* Background Atmosphere */}
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#F5D76E] opacity-[0.02] rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -196,6 +184,5 @@ export default function ContactSection() {
                     </div>
                 )}
             </section>
-        </Element>
     );
 }

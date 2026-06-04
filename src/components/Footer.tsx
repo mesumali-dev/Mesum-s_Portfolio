@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import {
     FaLinkedinIn,
     FaTwitter,
@@ -68,15 +67,12 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 {navLinks.map((link) => (
                                     <li key={link.to}>
-                                        <Link
-                                            to={link.to}
-                                            smooth={true}
-                                            duration={500}
-                                            offset={-80}
+                                        <a
+                                            href={`#${link.to}`}
                                             className="text-sm text-[#E5E5E5]/50 hover:text-[#F5D76E] transition-colors cursor-pointer font-medium"
                                         >
                                             {link.name}
-                                        </Link>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>

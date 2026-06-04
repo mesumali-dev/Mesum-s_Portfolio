@@ -1,10 +1,8 @@
-"use client";
-
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Insights() {
   return (
-    <section id="insights" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
+    <section id="Insights" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 text-center lg:text-left" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">

@@ -1,5 +1,3 @@
-"use client";
-
 import { PiBrainLight, PiCubeLight, PiCodeLight } from "react-icons/pi";
 
 export default function Specializations() {

@@ -1,5 +1,3 @@
-"use client";
-
 import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "@/constants/projects";

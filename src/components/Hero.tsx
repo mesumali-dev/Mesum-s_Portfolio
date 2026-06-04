@@ -1,15 +1,11 @@
-"use client";
-
-import { Link } from 'react-scroll';
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { PiBrainLight } from "react-icons/pi";
-import { LuDownload } from "react-icons/lu";
 import pic from "./../../public/mesum.png";
 
 export default function Hero() {
   return (
-    <div className="bg-[#050505] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
+    <div id="Home" className="bg-[#050505] lg:h-screen min-h-screen text-white overflow-hidden relative flex items-center pt-16">
       {/* AI-Inspired Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[#F5D76E] opacity-[0.04] rounded-full blur-[120px]"></div>
@@ -32,25 +28,19 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="200">
-              <Link
-                to="Projects"
-                smooth={true}
-                duration={500}
-                offset={-80}
+              <a
+                href="#Projects"
                 className="bg-[#F5D76E] hover:bg-[#d4b74e] text-black px-10 py-3.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#F5D76E]/20 cursor-pointer flex items-center justify-center"
               >
                 View Projects
-              </Link>
-              <Link
-                to="Contact"
-                smooth={true}
-                duration={500}
-                offset={-80}
+              </a>
+              <a
+                href="#Contact"
                 className="group px-10 py-3.5 rounded-full font-bold text-sm border-2 border-white/10 hover:border-[#F5D76E]/40 text-[#E5E5E5] hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>Get in Touch</span>
                 <div className="w-1.5 h-1.5 rounded-full bg-[#F5D76E] group-hover:animate-ping"></div>
-              </Link>
+              </a>
             </div>
 
             {/* Social Integration */}

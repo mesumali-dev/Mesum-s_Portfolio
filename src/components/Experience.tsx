@@ -1,5 +1,3 @@
-"use client";
-
 import { PiBriefcaseLight } from "react-icons/pi";
 
 const experiences = [
@@ -32,7 +30,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
+    <section id="Experience" className="bg-[#050505] py-12 px-6 md:px-16 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F5D76E] opacity-[0.02] blur-[120px] rounded-full pointer-events-none"></div>
 

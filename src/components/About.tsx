@@ -1,8 +1,6 @@
-"use client";
-
 export default function About() {
   return (
-    <section id="about" className="bg-[#0a0a0a] py-12 px-6 md:px-16 relative overflow-hidden">
+    <section id="About" className="bg-[#0a0a0a] py-12 px-6 md:px-16 relative overflow-hidden">
       {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F5D76E] opacity-[0.03] rounded-full blur-[120px] pointer-events-none"></div>
 
